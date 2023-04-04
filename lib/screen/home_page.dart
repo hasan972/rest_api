@@ -27,9 +27,10 @@ class _HomePageState extends State<HomePage> {
         itemCount: users.length,
         itemBuilder: (context, index) {
           final user = users[index];
-          final email = user.email;
+          //final email = user.email;
           return ListTile(
-            title: Text(email),
+            title: Text(user.name.first),
+            subtitle: Text(user.phone),
           );
         },
       ),
@@ -51,12 +52,17 @@ class _HomePageState extends State<HomePage> {
     final json = jsonDecode(body);
     final results = json['results'] as List<dynamic>;
     final transformed = results.map((e) {
+      //...........Call the user into the variable ........
+      final name =
+          UserName(title: e['name']['title'], first: e['name']['first'], last: e['name']['last']);
       return User(
-          gender: e['gender'],
-          email: e['email'],
-          phone: e['phone'],
-          cell: e['cell'],
-          nat: e['nat']);
+        gender: e['gender'],
+        email: e['email'],
+        phone: e['phone'],
+        cell: e['cell'],
+        nat: e['nat'],
+        name:name,
+      );
     }).toList();
 
     setState(() {
