@@ -1,0 +1,46 @@
+{
+    "check_number": "1004",
+    "store_number": "3002",
+    "location_code": "DIS01",
+    "employee_code": "3002",
+    "transaction_number": "8",
+    "transaction_date": "Dec28'22 06:39PM",
+    "delivery_time": "07:09PM",
+    "items": 
+    [
+        {
+            "item_name": "Delivery Charge",
+            "price": 60.0,
+            "description": ""
+        },
+        {
+            "item_name": "TUESDAY 20PC",
+            "price": 999.0,
+            "description": "8 PCs HC Fr Tus, Hot Wings 12 PC"
+        },
+        {
+            "item_name": "WHOLESOME LUNCH",
+            "price": 349.0,
+            "description": "RIZO RICE ML, 2 1 PCs DRUM STCK, Fries Regular, Pepsi Go Pk 250m"
+        },
+        {
+            "item_name": "DOU DWN ML",
+            "price": 579.0,
+            "description": "DOUBLE DOWN, Fries Regular, Pepsi Go Pk 250m"
+        },
+        {
+            "item_name": "BKT OF THE YEAR",
+            "price": 1249.0,
+            "description": "8 PCs HC Bucket, 2 PCs HC, 2 Fries Medium, 4 Pepsi Go Pk 250m"
+        }
+    ],
+    "payment_method": "Cash/bkash/nagod/visa/mastercard",
+    "paymentDetails": "",
+    "subtotal": 3236.0,
+    "discount": 20,
+    "discountDetails": "",
+    "Employee discount": "",
+    "serviceChargeDetails": "",
+    "vat": 154.1,
+    "total": 3236.0  
+}

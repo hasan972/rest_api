@@ -1,0 +1,118 @@
+{
+    "transactions": [
+        {
+            "check_number": "1008",
+            "employee_id": "3003",
+            "employee_name": "Shahin",
+            "terminal_id": "FC01",
+            "order_type": "Dine In",
+            "items": [
+                {
+                    "name": "4 PCs HC",
+                    "price": 589.00
+                },
+                {
+                    "name": "Fries Regular",
+                    "price": 109.00
+                }
+            ],
+            "total_due": 698.00,
+            "taxes": {
+                "VAT": 33.24,
+                "SD": 60.43
+            },
+            "payment_type": "Visa",
+            "subtotal": 698.00,
+            "payment": 698.00
+        },
+        {
+            "check_number": "1004",
+            "employee_id": "3002",
+            "employee_name": "IT",
+            "terminal_id": "DIS01",
+            "order_type": "Delivery",
+            "target_delivery_time": "07:09PM",
+            "items": [
+                {
+                    "name": "TUESDAY 20PC",
+                    "price": 999.00,
+                    "subitems": [
+                        {
+                            "name": "8 PCs HC Fr Tus"
+                        },
+                        {
+                            "name": "Hot Wings 12 PC"
+                        }
+                    ]
+                },
+                {
+                    "name": "WHOLESOME LUNCH",
+                    "price": 349.00,
+                    "subitems": [
+                        {
+                            "name": "RIZO RICE ML",
+                            "quantity": ""
+                        },
+                        {
+                            "name": "1 PCs DRUM STCK",
+                            "quantity": 2
+                        },
+                        {
+                            "name": "Fries Regular",
+                            "quantity": ""
+                        },
+                        {
+                            "name": "Pepsi Go Pk 250m",
+                            "quantity": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "DOU DWN ML",
+                    "price": 579.00,
+                    "subitems": [
+                        {
+                            "name": "DOUBLE DOWN"
+                        },
+                        {
+                            "name": "Fries Regular"
+                        },
+                        {
+                            "name": "Pepsi Go Pk 250m"
+                        }
+                    ]
+                },
+                {
+                    "name": "BKT OF THE YEAR",
+                    "price": 1249.00,
+                    "subitems": [
+                        {
+                            "name": "8 PCs HC Bucket",
+                            "quantity": ""
+                        },
+                        {
+                            "name": "2 PCs HC",
+                            "quantity": ""
+                        },
+                        {
+                            "name": "Fries Medium",
+                            "quantity": ""
+                        },
+                        {
+                            "name": "Pepsi Go Pk 250m",
+                            "quantity": 4
+                        }
+                    ]
+                }
+            ],
+            "total_due": 3236.00,
+            "taxes": {
+                "VAT": 154.10
+            },
+            "payment_type": "Cash",
+            "delivery_charge": 60,
+            "subtotal": 3236.00,
+            "payment": 3236.00
+        }
+    ]
+}

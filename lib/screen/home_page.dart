@@ -1,22 +1,27 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-
+import 'package:rest_api/services/user_api.dart';
 import '../models/user.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-
   @override
+  
   State<HomePage> createState() => _HomePageState();
+  
 }
 
 class _HomePageState extends State<HomePage> {
   //......List of dynamic is now list of user because now we use the model for fatch the data....
   //List<dynamic> users = [];
   List<User> users = [];
+  //....use init state for fatch the data.......//
   @override
+   void initState() {
+    super.initState();
+    fatchUsers();
+  }
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -29,13 +34,15 @@ class _HomePageState extends State<HomePage> {
           final user = users[index];
           //final email = user.email;
           return ListTile(
-            title: Text(user.name.first),
+            title: Text(user.fulName),
             subtitle: Text(user.phone),
           );
         },
       ),
+   //   ...........Floating Action button is now call into the setState.........//
+
       floatingActionButton: FloatingActionButton(
-        onPressed: fatchUserCall,
+        onPressed: fatchUsers,
         child: const Icon(
           Icons.add, // replace with the desired icon
           size: 38.0, // set the size of the icon
@@ -43,31 +50,12 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+  //...........create a function for call the User list
 
-  void fatchUserCall() async {
-    const url = 'https://randomuser.me/api/?results=100';
-    final uri = Uri.parse(url);
-    final response = await http.get(uri);
-    final body = response.body;
-    final json = jsonDecode(body);
-    final results = json['results'] as List<dynamic>;
-    final transformed = results.map((e) {
-      //...........Call the user into the variable ........
-      final name =
-          UserName(title: e['name']['title'], first: e['name']['first'], last: e['name']['last']);
-      return User(
-        gender: e['gender'],
-        email: e['email'],
-        phone: e['phone'],
-        cell: e['cell'],
-        nat: e['nat'],
-        name:name,
-      );
-    }).toList();
-
+  Future<void> fatchUsers() async {
+    final response = await UserApi.fatchUsers();
     setState(() {
-      users = transformed;
+      users = response;
     });
-    print('Compleate');
   }
 }
