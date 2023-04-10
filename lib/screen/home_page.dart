@@ -17,10 +17,10 @@ class _HomePageState extends State<HomePage> {
   List<User> users = [];
   //....use init state for fatch the data.......//
   @override
-   void initState() {
-    super.initState();
-    fatchUsers();
-  }
+  //  void initState() {
+  //   super.initState();
+  //   fatchUsers();
+  // }
     @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
           //final email = user.email;
           return ListTile(
             title: Text(user.fulName),
-            subtitle: Text(user.phone),
+            subtitle: Text(user.location.state),
           );
         },
       ),
